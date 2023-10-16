@@ -2,8 +2,11 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    baseUrl: 'https://growth.deel.training/dev/salary-insights',
   },
+
+  env: {
+    titles: ['Accountant', 'QA Engineer', 'Software Engineer'], 
+    countries: ['Brazil', 'Canada', 'Japan'],
+  }
 });
